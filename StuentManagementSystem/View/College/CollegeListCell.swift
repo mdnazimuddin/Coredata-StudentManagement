@@ -22,7 +22,7 @@ class CollegeListCell: UITableViewCell {
             let university = college.university ?? "not found"
             
             collegeNameLbl.text = "Name : \(name)"
-            collegeAddressLbl.text = "Address : \(address),"
+            collegeAddressLbl.text = "Address : \(address)"
             collegeCityLbl.text = "City : \(city)"
             collegeUniversityLbl.text = "University : \(university)"
         }

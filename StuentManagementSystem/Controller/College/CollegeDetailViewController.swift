@@ -13,6 +13,7 @@ class CollegeDetailViewController: UITableViewController {
     @IBOutlet weak var collegeAddressLbl: UILabel!
     @IBOutlet weak var collegeCityLbl: UILabel!
     @IBOutlet weak var collegeUniversityLbl: UILabel!
+    @IBOutlet weak var collegeStudentLbl: UILabel!
     var collegeDetail:College?
     var indexRow = Int()
     override func viewDidLoad() {
@@ -39,7 +40,13 @@ class CollegeDetailViewController: UITableViewController {
         
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 4 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let studentListVC:StudentListViewController = storyboard.instantiateViewController(withIdentifier: "StudentListViewController") as! StudentListViewController
+            self.navigationController?.pushViewController(studentListVC, animated: true)
+        }
+    }
 
 
 }

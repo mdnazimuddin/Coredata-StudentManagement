@@ -60,3 +60,54 @@ class DatabaseManager: NSObject {
         return college
     }
 }
+
+// MARK: Student
+
+extension DatabaseManager{
+    
+    func saveStudentInfo(object:[String:String])
+    {
+        let student = NSEntityDescription.insertNewObject(forEntityName: "Student", into: contex!) as! Student
+        student.name = object["name"]
+        student.email = object["email"]
+        student.mobile = object["mobile"]
+        do{
+            try contex?.save()
+        }catch{
+            print("Error Save Data")
+        }
+    }
+    func getAllStudentInfo() -> [Student] {
+        var student = [Student]()
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Student")
+        do{
+            student = try contex?.fetch(fetchRequest) as! [Student]
+        }catch{
+            print("Error get Data")
+        }
+        return student
+    }
+    func deleteStudentInfo(index:Int) -> [Student] {
+        var student = getAllStudentInfo()
+        contex?.delete(student[index])
+        student.remove(at: index)
+        do{
+            try contex?.save()
+        }catch{
+            print("Error Delete Info")
+        }
+        return student
+    }
+    func updateStudentInfo(index:Int,object:[String:String]) -> [Student]{
+        let student = getAllStudentInfo()
+        student[index].name = object["name"]
+        student[index].email = object["email"]
+        student[index].mobile = object["mobile"]
+        do{
+            try contex?.save()
+        }catch{
+            print("Data Did`t Update")
+        }
+        return student
+    }
+}

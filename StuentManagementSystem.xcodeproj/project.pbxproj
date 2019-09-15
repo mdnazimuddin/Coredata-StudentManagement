@@ -14,6 +14,10 @@
 		F41957152329240200B162FC /* College+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41957132329240200B162FC /* College+CoreDataProperties.swift */; };
 		F4195719232929D800B162FC /* CollegeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4195718232929D800B162FC /* CollegeListCell.swift */; };
 		F41AC62A232DD0AB0032EE65 /* CollegeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC629232DD0AB0032EE65 /* CollegeDetailViewController.swift */; };
+		F41AC62F232DFEBF0032EE65 /* College.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41AC62E232DFEBF0032EE65 /* College.storyboard */; };
+		F41AC633232E0DF50032EE65 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC632232E0DF50032EE65 /* StudentListViewController.swift */; };
+		F41AC635232E0E190032EE65 /* StudentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC634232E0E190032EE65 /* StudentFormViewController.swift */; };
+		F41AC637232E0E3A0032EE65 /* StudentListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC636232E0E3A0032EE65 /* StudentListCell.swift */; };
 		F443241B2327F3E700791810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443241A2327F3E700791810 /* AppDelegate.swift */; };
 		F443241D2327F3E700791810 /* CollegeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443241C2327F3E700791810 /* CollegeListViewController.swift */; };
 		F44324202327F3E700791810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F443241E2327F3E700791810 /* Main.storyboard */; };
@@ -30,6 +34,10 @@
 		F41957132329240200B162FC /* College+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "College+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4195718232929D800B162FC /* CollegeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeListCell.swift; sourceTree = "<group>"; };
 		F41AC629232DD0AB0032EE65 /* CollegeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDetailViewController.swift; sourceTree = "<group>"; };
+		F41AC62E232DFEBF0032EE65 /* College.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = College.storyboard; sourceTree = "<group>"; };
+		F41AC632232E0DF50032EE65 /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		F41AC634232E0E190032EE65 /* StudentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFormViewController.swift; sourceTree = "<group>"; };
+		F41AC636232E0E3A0032EE65 /* StudentListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListCell.swift; sourceTree = "<group>"; };
 		F44324172327F3E700791810 /* StuentManagementSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StuentManagementSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F443241A2327F3E700791810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F443241C2327F3E700791810 /* CollegeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeListViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +63,7 @@
 		F4180F3A2327F5BF0092089E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F41AC630232E0DBD0032EE65 /* Student */,
 				F4180F3F2328078D0092089E /* College */,
 			);
 			path = Controller;
@@ -63,6 +72,7 @@
 		F4180F3B2327F5CF0092089E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F41AC631232E0DC60032EE65 /* Student */,
 				F41957172329298500B162FC /* College */,
 			);
 			path = View;
@@ -125,6 +135,23 @@
 			path = College;
 			sourceTree = "<group>";
 		};
+		F41AC630232E0DBD0032EE65 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				F41AC632232E0DF50032EE65 /* StudentListViewController.swift */,
+				F41AC634232E0E190032EE65 /* StudentFormViewController.swift */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		F41AC631232E0DC60032EE65 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				F41AC636232E0E3A0032EE65 /* StudentListCell.swift */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
 		F443240E2327F3E600791810 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				F443241E2327F3E700791810 /* Main.storyboard */,
+				F41AC62E232DFEBF0032EE65 /* College.storyboard */,
 				F44324262327F40200791810 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -227,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41AC62F232DFEBF0032EE65 /* College.storyboard in Resources */,
 				F44324282327F40200791810 /* LaunchScreen.storyboard in Resources */,
 				F44324252327F40200791810 /* Assets.xcassets in Resources */,
 				F44324202327F3E700791810 /* Main.storyboard in Resources */,
@@ -240,15 +269,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41AC633232E0DF50032EE65 /* StudentListViewController.swift in Sources */,
 				F41957152329240200B162FC /* College+CoreDataProperties.swift in Sources */,
 				F4180F3E2328025F0092089E /* CollegeFormViewController.swift in Sources */,
 				F41AC62A232DD0AB0032EE65 /* CollegeDetailViewController.swift in Sources */,
 				F443241D2327F3E700791810 /* CollegeListViewController.swift in Sources */,
 				F4180F42232807D70092089E /* DatabaseManager.swift in Sources */,
 				F41957142329240200B162FC /* College+CoreDataClass.swift in Sources */,
+				F41AC635232E0E190032EE65 /* StudentFormViewController.swift in Sources */,
 				F443241B2327F3E700791810 /* AppDelegate.swift in Sources */,
 				F44324232327F3E700791810 /* StuentManagementSystem.xcdatamodeld in Sources */,
 				F4195719232929D800B162FC /* CollegeListCell.swift in Sources */,
+				F41AC637232E0E3A0032EE65 /* StudentListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

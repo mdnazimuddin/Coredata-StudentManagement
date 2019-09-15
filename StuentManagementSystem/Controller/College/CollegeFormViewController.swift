@@ -24,7 +24,8 @@ class CollegeFormViewController: UIViewController{
     // MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        actionBtnOutlet.layer.cornerRadius = 20
+        actionBtnOutlet.clipsToBounds = true
         
     }
     override func viewWillAppear(_ animated: Bool) {

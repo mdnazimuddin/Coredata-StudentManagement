@@ -6,7 +6,13 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="university" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="College" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Student" positionX="-63" positionY="9" width="128" height="90"/>
     </elements>
 </model>
