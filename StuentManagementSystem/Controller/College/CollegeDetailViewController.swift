@@ -29,6 +29,12 @@ class CollegeDetailViewController: UITableViewController {
         collegeAddressLbl.text = collegeDetail?.address
         collegeCityLbl.text = collegeDetail?.city
         collegeUniversityLbl.text = collegeDetail?.university
+        if collegeDetail?.students?.allObjects != nil {
+            let students:[Student] = (collegeDetail?.students?.allObjects as? [Student])!
+            collegeStudentLbl.text = "\(students.count)"
+        }else{
+            collegeStudentLbl.text = "0"
+        }
     }
 
     @IBAction func editColegeInfo(_ sender: UIBarButtonItem) {
@@ -44,6 +50,7 @@ class CollegeDetailViewController: UITableViewController {
         if indexPath.row == 4 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let studentListVC:StudentListViewController = storyboard.instantiateViewController(withIdentifier: "StudentListViewController") as! StudentListViewController
+            studentListVC.college = collegeDetail
             self.navigationController?.pushViewController(studentListVC, animated: true)
         }
     }

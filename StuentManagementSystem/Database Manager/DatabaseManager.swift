@@ -65,12 +65,13 @@ class DatabaseManager: NSObject {
 
 extension DatabaseManager{
     
-    func saveStudentInfo(object:[String:String])
+    func saveStudentInfo(object:[String:String], college:College)
     {
         let student = NSEntityDescription.insertNewObject(forEntityName: "Student", into: contex!) as! Student
         student.name = object["name"]
         student.email = object["email"]
         student.mobile = object["mobile"]
+        student.universities = college
         do{
             try contex?.save()
         }catch{

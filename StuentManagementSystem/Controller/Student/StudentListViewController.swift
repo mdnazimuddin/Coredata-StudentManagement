@@ -12,18 +12,23 @@ class StudentListViewController: UIViewController {
 
     @IBOutlet weak var studentListtblView: UITableView!
     var studentData = [Student]()
+    var college:College?
     override func viewDidLoad() {
         super.viewDidLoad()
         studentListtblView.register(StudentListCell.self, forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        studentData = DatabaseManager.shareInstance.getAllStudentInfo()
+        if college?.students?.allObjects != nil {
+            studentData = (college?.students?.allObjects as? [Student])!
+        }
+        //studentData = DatabaseManager.shareInstance.getAllStudentInfo()
        studentListtblView.reloadData()
     }
     
     @IBAction func addStudentButton(_ sender: Any) {
         let studentForm:StudentFormViewController = storyboard?.instantiateViewController(withIdentifier: "StudentFormViewController") as! StudentFormViewController
+        studentForm.college = college
         self.navigationController?.pushViewController(studentForm, animated: true)
     }
     

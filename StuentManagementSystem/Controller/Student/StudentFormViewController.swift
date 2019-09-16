@@ -14,6 +14,7 @@ class StudentFormViewController: UIViewController {
     @IBOutlet weak var studentEmailLbl: UITextField!
     @IBOutlet weak var studentMobileLbl: UITextField!
     @IBOutlet weak var actionButtonOutlet: UIButton!
+    var college:College?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,13 +34,13 @@ extension StudentFormViewController{
         guard let studentName = studentNameLbl.text else {return}
         guard let studentEmail = studentEmailLbl.text else {return}
         guard let studentMobile = studentMobileLbl.text else {return}
-        
+        guard let mainCollege = college else {return}
         let dic = [
             "name":studentName,
             "email":studentEmail,
             "mobile":studentMobile
         ]
-        DatabaseManager.shareInstance.saveStudentInfo(object: dic)
+        DatabaseManager.shareInstance.saveStudentInfo(object: dic, college: mainCollege)
         navigationController?.popViewController(animated: true)
     }
     func updateCollegeInfo()
@@ -53,7 +54,7 @@ extension StudentFormViewController{
             "email":studentEmail,
             "mobile":studentMobile
         ]
-        DatabaseManager.shareInstance.saveStudentInfo(object: dic)
+        DatabaseManager.shareInstance.saveStudentInfo(object: dic, college:college!)
         navigationController?.popViewController(animated: true)
     }
 }
